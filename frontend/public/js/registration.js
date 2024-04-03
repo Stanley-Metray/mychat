@@ -11,7 +11,7 @@ document.getElementById('registration-form').addEventListener('submit', async (e
                 }
             });
             const data = await response.data;
-            
+
             if (data.success) {
                 setMessage(data.message, "alert alert-success d-block mt-3");
                 const expirationDate = new Date();
