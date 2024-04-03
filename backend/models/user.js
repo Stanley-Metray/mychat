@@ -29,5 +29,9 @@ module.exports = User = sequelize.define('user', {
     password : {
         type : DataTypes.STRING,
         allowNull : false
+    },
+    tokens : {
+        type : DataTypes.JSON,
+        defaultValue : []
     }
 });

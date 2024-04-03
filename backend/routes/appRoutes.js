@@ -5,4 +5,6 @@ const appRouter = Router();
 
 appRouter.get('/', appController.getHomePage);
 
+appRouter.get('/error', appController.getErrorPage);
+
 module.exports = appRouter;
