@@ -1,0 +1,22 @@
+body
+{
+    background-color: #2c2c54;
+}
+
+.signup-form
+{
+    background-color: #dff9fb;
+    width: 40%;
+}
+
+footer
+{
+    background-color: #40407a;
+}
+
+@media (max-width: 768px) {
+    .signup-form {
+      width: 100%;
+    }
+  }
+  
