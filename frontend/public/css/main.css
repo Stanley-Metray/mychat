@@ -94,12 +94,17 @@ body {
     word-break: break-word;
 }
 
-.message-one {
+.message:nth-child(even) {
     background: #203541;
 }
 
-.message-two {
+.message:nth-child(odd) {
     background: #374955;
+}
+
+.fs-user
+{
+    font-size: 11px;
 }
 
 @media (max-width: 768px) {
