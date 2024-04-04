@@ -21,7 +21,7 @@ module.exports.verifyToken = (req, res, next) => {
             console.log(err);
             return res.status(401).sendFile(path.join(__dirname, "../../frontend/views", "authError.html"));
         }
-        req.UserId = decoded.id;
+        req.body.userId = decoded.id;
         next();
     });
 }
