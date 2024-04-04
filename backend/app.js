@@ -1,6 +1,7 @@
 require('dotenv').config({path:'../.env'});
 const express = require('express');
 const path = require('path');
+const cookieParser = require('cookie-parser');
 const appRouter = require('../backend/routes/appRoutes');
 const userRouter = require('../backend/routes/userRoutes');
 const sequelize = require('../backend/connection/connect');
@@ -9,9 +10,11 @@ const sequelize = require('../backend/connection/connect');
 const app = express();
 
 app.use(express.json());
+app.use(cookieParser());
 app.use('/js', express.static(path.join(__dirname, '../frontend/public/js')));
 app.use('/css', express.static(path.join(__dirname, '../frontend/public/css')));
 app.use('/css', express.static(path.join(__dirname, '../node_modules/bootstrap/dist/css')));
+app.use('/font', express.static(path.join(__dirname, '../node_modules/bootstrap-icons/font')));
 app.use(appRouter);
 app.use(userRouter);
 

@@ -10,16 +10,16 @@ module.exports.generateToken = async (user) => {
     return token;
 }
 
-module.exports.verifyToken = async (req, res, next) => {
+module.exports.verifyToken = (req, res, next) => {
     const token = req.cookies.token;
     if (!token)
-        return res.status(401).sendFile(path.join(__dirname, "../views", "authError.html"));
+        return res.status(401).sendFile(path.join(__dirname, "../../frontend/views", "authError.html"));
 
     jwt.verify(token, process.env.JWT_SECRETE_KEY, (err, decoded) => {
         if (err)
         {
             console.log(err);
-            return res.status(401).sendFile(path.join(__dirname, "../views", "authError.html"));
+            return res.status(401).sendFile(path.join(__dirname, "../../frontend/views", "authError.html"));
         }
         req.UserId = decoded.id;
         next();
