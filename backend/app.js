@@ -13,6 +13,7 @@ app.use(cookieParser());
 app.use('/js', express.static(path.join(__dirname, '../frontend/public/js')));
 app.use('/css', express.static(path.join(__dirname, '../frontend/public/css')));
 app.use('/css', express.static(path.join(__dirname, '../node_modules/bootstrap/dist/css')));
+app.use('/js', express.static(path.join(__dirname, '../node_modules/bootstrap/dist/js')));
 app.use('/font', express.static(path.join(__dirname, '../node_modules/bootstrap-icons/font')));
 routerConfig.config(app);
 

@@ -3,13 +3,27 @@ const sequelize = require('../connection/connect');
 
 module.exports = Chat = sequelize.define('chat', {
     id : {
-        type : DataTypes.INTEGER,
-        primaryKey : true,
+        type : DataTypes.STRING,
         allowNull : false,
-        autoIncrement : true
+        primaryKey : true,
+        unique : true
     },
-    message : {
-        type : DataTypes.TEXT,
+    isGroup : {
+        type : DataTypes.BOOLEAN,
+        defaultValue : false,
         allowNull : false
+    },
+    group_name : {
+        type : DataTypes.STRING,
+        allowNull : true
+    },
+    group_description : {
+        type : DataTypes.STRING,
+        allowNull : true
+    },
+    total_members : {
+        type : DataTypes.INTEGER,
+        allowNull : true,
+        defaultValue : 1
     }
-})
+});
