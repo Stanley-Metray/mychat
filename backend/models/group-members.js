@@ -19,5 +19,9 @@ module.exports = GroupMembers = sequelize.define('group_members', {
     chatId : {
         type : DataTypes.STRING,
         allowNull : false
+    },
+    isAdmin : {
+        type : DataTypes.BOOLEAN,
+        defaultValue : false
     }
 });

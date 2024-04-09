@@ -18,4 +18,13 @@ chatRouter.get('/get-chats', authController.verifyToken, chatController.getAllCh
 
 chatRouter.get('/get-chat/:id', authController.verifyToken, chatController.getChat);
 
+chatRouter.post('/make-admin', authController.verifyToken, chatController.postMakeAdmin);
+
+chatRouter.post('/remove-member', authController.verifyToken, chatController.removeMember);
+
+chatRouter.post('/add-member', authController.verifyToken, chatController.postAddMember);
+
+chatRouter.post('/search-member-by-phone', authController.verifyToken, chatController.postSearchMemberByPhone);
+
+
 module.exports = chatRouter;

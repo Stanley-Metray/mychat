@@ -74,3 +74,4 @@ module.exports.postLoginUser = async (req, res) => {
         console.log(error);
     }
 }
+

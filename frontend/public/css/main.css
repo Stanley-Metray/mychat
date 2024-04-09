@@ -237,8 +237,6 @@ background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, F
     z-index: 1000;
 }
 
-
-
 .message {
     padding: 5px;
     border-radius: 10px;
@@ -273,6 +271,15 @@ background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, F
     z-index: 10000;
     background: #485460;
 }
+
+/* Modal styling */
+
+.modal
+{
+    z-index: 10000 !important;  
+}
+
+/* Modal styling end */
 
 /* footer styling  */
 

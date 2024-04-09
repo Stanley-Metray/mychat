@@ -25,5 +25,9 @@ module.exports = Chat = sequelize.define('chat', {
         type : DataTypes.INTEGER,
         allowNull : true,
         defaultValue : 1
+    },
+    admins : {
+        type : DataTypes.JSON,
+        allowNull : true
     }
 });
