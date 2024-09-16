@@ -1,7 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../connection/connect');
 
-
 module.exports = User = sequelize.define('user', {
     id : {
         type : DataTypes.INTEGER,
